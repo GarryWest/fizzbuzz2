@@ -2,11 +2,11 @@ $(document).ready(function(){
 
   var resetStatus = function(){
     $(".status-text").text("Please enter the number of loops for Fizz Buzz");
-    $(".iteminput").val("");
-    $(".iteminput").focus();
+    $(".iteminput").val("").focus();
   };
 
   var playFizzBuzz = function(count) {
+    $(".entry-lines").text("");
     for (var i=1; i<=count; i++){
       if ((i % 3 === 0) && (i % 5 === 0)){
           $(".entry-lines").append("fizzbuzz<br/>");
@@ -25,8 +25,7 @@ $(document).ready(function(){
   var printWarning = function(){
         var my_text = $(".iteminput").val();
         $(".status-text").text("Invalid entry: "+my_text+". Please enter an integer.");
-        $(".iteminput").val("");
-        $(".iteminput").focus();
+        $(".iteminput").val("").focus();
   };
 
   var validateNumber = function(){
